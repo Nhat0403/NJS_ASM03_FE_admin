@@ -1,0 +1,40 @@
+main.centered {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 50rem;
+  margin: 2rem auto;
+}
+
+main.centered h1 {
+  text-align: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  margin: 0 auto;
+  gap: 1rem;
+}
+
+.form-control {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background-color: var(--light-blue);
+  outline: none;
+  border: 1px solid var(--light-blue);
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+

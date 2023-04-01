@@ -1,0 +1,40 @@
+.dashboard {
+  display: grid;
+  gap: 10px;
+}
+
+.grid.dbContainer {
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px solid var(--main-grey);
+}
+
+.dbItem.flex {
+  justify-content: space-between;
+  padding: 15px;
+  border-right: 1px solid var(--main-grey);
+}
+
+.dbItem.flex:last-child {
+  border-right: none;
+}
+
+.dbInfo.flex-column {
+  align-items: flex-start;
+}
+
+.dbTitle {
+  font-weight: bold;
+  font-size: 24px;
+  height: fit-content;
+}
+
+.dbTitle.earning > sup {
+  font-size: 16px;
+  vertical-align: baseline;
+  position: relative;
+  top: -5px;
+}
+
+.dbIcon > .sbIcon {
+  scale: 2;
+}
