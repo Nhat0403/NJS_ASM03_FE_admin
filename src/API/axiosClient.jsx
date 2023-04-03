@@ -16,7 +16,7 @@ const axiosClient = axios.create({
 	paramsSerializer: {
 		indexes: null
 	},
-	withCredentials: true
+	mode: 'cors'
 });
 axiosClient.interceptors.request.use(async (config) => {
 	// Handle token here ...
