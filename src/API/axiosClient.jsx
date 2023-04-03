@@ -5,18 +5,17 @@ import getCookie from '../getCookie';
 import { useSelector } from 'react-redux';
 // Set up default config for http requests here
 // Please have a look at here `https://github.com/axios/axios#requestconfig` for the full list of configs
-const idUser = localStorage.getItem('id_user');
-const token = idUser ? getCookie('user_token') : '';
+const token = localStorage.getItem('user_token');
+const baseURL = 'https://njs-asm-03-be.vercel.app/';
 const axiosClient = axios.create({
-	baseURL: 'https://njs-asm-03-be.vercel.app/',
+	baseURL: 'http://localhost:5000/',
 	headers: {
-		Authorization: 'Bearer ' + token,
+		'Authorization': 'Bearer ' + token,
 		'Content-Type': 'application/json'
 	},
 	paramsSerializer: {
 		indexes: null
-	},
-	mode: 'cors'
+	}
 });
 axiosClient.interceptors.request.use(async (config) => {
 	// Handle token here ...

@@ -25,8 +25,6 @@ const ChatList = () => {
   const [load, setLoad] = useState(false);
   const idUser = localStorage.getItem('id_user');
 
-  console.log(chatSearch.value);
-    
   useEffect(() => {
     const getAllRoom = async() => {
       const params = {

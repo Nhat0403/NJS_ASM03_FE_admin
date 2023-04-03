@@ -51,8 +51,8 @@ const Login = (pros) => {
             console.log(response);
             localStorage.setItem('id_user', response._id);
             localStorage.setItem('name_user', response.fullname);
+            localStorage.setItem('user_token', response.token);
             const action = addSession(response);
-            // const action = addSession(localStorage.getItem('id_user'));
             dispatch(action);
             setCookie('user_token', response.token, +1);
             console.log('token: ' + getCookie('user_token'));
@@ -61,10 +61,10 @@ const Login = (pros) => {
         })
         .catch(err => {
           console.log(err);
-          // setError({
-          //   title: 'Validation failed!',
-          //   message: err.response.data.message
-          // })
+          setError({
+            title: 'Validation failed!',
+            message: err.response.data.message
+          })
         });
     };
 
