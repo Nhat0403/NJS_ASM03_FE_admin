@@ -8,7 +8,7 @@ import { useSelector } from 'react-redux';
 const token = localStorage.getItem('user_token');
 const baseURL = 'https://njs-asm-03-be.vercel.app/';
 const axiosClient = axios.create({
-	baseURL: 'http://localhost:5000/',
+	baseURL: baseURL,
 	headers: {
 		'Authorization': 'Bearer ' + token,
 		'Content-Type': 'application/json'
