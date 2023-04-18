@@ -1,11 +1,11 @@
 import { generateBase64FromImage } from "./image";
 
-export const validate = (value, set, validators) => {
+export const validate = (value, setInput, validators) => {
   let valid = true;
   for(const validator of validators) {
     valid = valid && validator(value);
   };
-  set(prev => ({
+  setInput(prev => ({
     ...prev,
     value: value,
     valid: valid

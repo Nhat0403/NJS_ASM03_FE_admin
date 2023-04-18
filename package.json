@@ -2,7 +2,7 @@
   "name": "booking",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://njs-asm-03-be-y7ad.vercel.app/",
+  "proxy": "https://njs-asm-03-be.vercel.app/",
   "homepage": ".",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
